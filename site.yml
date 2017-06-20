@@ -1,0 +1,9 @@
+---
+- name: Intall Nginx, git, python, gunicorn
+  hosts: webservers
+  roles:
+    - ufw
+    - nginx
+    - git  
+    - python
+    - gunicorn

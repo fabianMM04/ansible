@@ -1,0 +1,6 @@
+ansible_user: root
+ansible_ssh_private_key_file: /root/.ssh/id_rsa
+server_hostname: 165.227.66.18
+ansible_user: root 
+ansible_ssh_private_key_file: /root/.ssh/id_rsa
+server_hostname: 165.227.66.18

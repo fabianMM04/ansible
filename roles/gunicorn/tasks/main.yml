@@ -1,0 +1,5 @@
+- name: Deploy app
+  become: yes
+  command: gunicorn app:app -p app.pid -b 0.0.0.0:80 -D
+  args:
+    chdir: /var/www/ormuco
