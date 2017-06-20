@@ -21,7 +21,7 @@
 - name: allow all access to port 8000
   become: yes
   ufw:
-    rule: allow
+    rule: deny
     port: 8000
     proto: tcp
 
