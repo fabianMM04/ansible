@@ -1,9 +1,10 @@
 ---
-- name: Intall Nginx, git, python, gunicorn
+- name: Deploy flask app with ufw, mysql, Nginx, git, python, gunicorn
   hosts: webservers
   roles:
-    - ufw
-    - nginx
-    - git  
-    - python
-    - gunicorn
+     - ufw
+     - mysql
+     - nginx
+     - git  
+     - python
+     - gunicorn

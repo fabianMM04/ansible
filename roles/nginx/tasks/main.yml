@@ -24,10 +24,10 @@
     src: default.conf 
     dest: /etc/nginx/sites-enabled/default.conf
     
-- name: Ensure that the default site is removed
+- name: Ensure that the default site-available is removed
   file: path=/etc/nginx/site-available/default state=absent
 
-- name: Ensure that the default site is removed
+- name: Ensure that the default site-enabled  is removed
   file: path=/etc/nginx/sites-enabled/default state=absent
 
 - name: restart nginx

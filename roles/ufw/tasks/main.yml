@@ -9,7 +9,14 @@
   ufw:
     rule: allow
     port: 22
-    proto: tcp   
+    proto: tcp  
+
+- name: allow all access to port 3306
+  become: yes
+  ufw:
+    rule: allow
+    port: 3306
+    proto: tcp 
 
 - name: allow all access to port 80
   become: yes
@@ -18,7 +25,7 @@
     port: 80
     proto: tcp
 
-- name: allow all access to port 8000
+- name: deny all access to port 8000
   become: yes
   ufw:
     rule: deny
