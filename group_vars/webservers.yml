@@ -1,3 +1,4 @@
 ansible_user: root 
 ansible_ssh_private_key_file: ~/.ssh/key
 server_hostname: 165.227.66.18
+server_hostname_2: 198.211.123.56
