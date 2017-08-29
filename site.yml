@@ -1,5 +1,10 @@
 ---
-- name: Install and clone git
+- name: Deploy flask app with ufw, mysql, Nginx, git, python, gunicorn
   hosts: webservers
   roles:
+     - ufw
+     - mysql
+     - nginx
      - git  
+     - python
+     - gunicorn

@@ -1,0 +1,28 @@
+---
+- name: Init db
+  become: yes
+  command: python app.py db init
+  args:
+    chdir: /var/www/ormuco
+    creates: /var/www/ormuco/migrations
+
+- name: upgrade db
+  become: yes
+  command: python app.py db upgrade
+  args:
+    chdir: /var/www/ormuco
+
+- name: migrate db
+  become: yes
+  command: python app.py db migrate
+  args:
+    chdir: /var/www/ormuco
+
+
+- name: Deploy app
+  become: yes
+  command: gunicorn app:app -p app.pid -b 0.0.0.0:80 -D
+  args:
+    chdir: /var/www/ormuco
+
+
